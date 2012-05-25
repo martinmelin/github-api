@@ -670,7 +670,7 @@
     gh.gist.prototype.show = withTempApiRoot(
         "http://gist.github.com/api/v1/json/",
         function (callback, context) {
-            jsonp(this.id, callback, cont);
+            jsonp(this.id, callback, context);
             return this;
         }
     );
@@ -678,7 +678,7 @@
     gh.gist.prototype.file = withTempApiRoot(
         "http://gist.github.com/raw/v1/json/",
         function (filename, callback, context) {
-            jsonp(this.id + "/" + filename, callback, cont);
+            jsonp(this.id + "/" + filename, callback, context);
             return this;
         }
     );
